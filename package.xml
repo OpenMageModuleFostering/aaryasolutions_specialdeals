@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Aaryasolutions_Specialdeals</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Aaryasolutions_Specialdeals</summary>
+    <description>This extension helps to add special deals from backend. We can view the special deal on frontend</description>
+    <notes>This extension helps to add special deals from backend. We can view the special deal on frontend</notes>
+    <authors><author><name>AaryaSolutions</name><user>aaryasolutions</user><email>info@aaryasolutions.com</email></author></authors>
+    <date>2015-01-18</date>
+    <time>09:13:03</time>
+    <contents><target name="magecommunity"><dir name="Aaryasolutions"><dir name="Specialdeals"><dir name="Block"><dir name="Adminhtml"><dir name="Specialdeals"><dir name="Edit"><file name="Form.php" hash="5b186760005fe99f7d3e2d56bba5be16"/><dir name="Tab"><file name="Form.php" hash="363f62aa18ef3140ebba5dea30041dd7"/><dir name="List"><dir name="Renderer"><file name="Listorders.php" hash="292772b59c94ed31a3a9e7028f6154f8"/><file name="Order.php" hash="1a213d44f4bed5608c19275e70f1dce5"/></dir></dir><file name="List.php" hash="8bad52ec8128f601bca0ab719b648a0f"/><file name="Orders.php" hash="708eb74361bf6a8dc579a91be82b5b07"/></dir><file name="Tabs.php" hash="840e358d951f1aeec04db06efb420814"/></dir><file name="Edit.php" hash="3f717ec1f861bd4def99342c97466987"/><file name="Grid.php" hash="6ae87e2888612ec9f73940b177810c07"/></dir><file name="Specialdeals.php" hash="cd19a01b7f496ed4e10173656800f5e7"/></dir><file name="Specialpriceproducts.php" hash="4e8a3ba76b04609214b8ef277594adf1"/></dir><dir name="Helper"><file name="Data.php" hash="d3c3e80a9302105960134c6a33d8b6b6"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Specialdeals"><file name="Collection.php" hash="600d0d48805c91a52fb0b8d27139257b"/></dir><file name="Specialdeals.php" hash="5af089e166308d746c1ac4a4ea8a2222"/></dir><file name="Specialdeals.php" hash="35dd0aa934551001c250f8c15b38ee70"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="SpecialdealsController.php" hash="b5959a9d6b058e78fc8e5e060853a49b"/></dir><file name="IndexController.php" hash="10f3a7209f7c2f4f525fe8594e8887b9"/></dir><dir name="etc"><file name="config.xml" hash="a5c790a1737ddd2e59947760f6c46fda"/></dir><dir name="sql"><dir name="specialdeals_setup"><file name="mysql4-install-0.1.0.php" hash="f2c6b8beeffc1662d5fe71e7fc87aa8c"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="rwd"><dir name="default"><dir name="layout"><file name="specialdeals.xml" hash="84bb5d4e6d6b5918bb3d665c50e34b62"/></dir><dir name="template"><dir name="specialdeals"><file name="products.phtml" hash="194f17a08cc13f583c8911dc6a88c79e"/><file name="sproducts.phtml" hash="b0af9fc20a9370e581de142edcede6a8"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Aaryasolutions_Specialdeals.xml" hash="153712e67c609a2ad726d457463fa5fb"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>5.6.4</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.8.0</min><max>1.9.0.1</max></package></required></dependencies>
+</package>

@@ -1,0 +1,121 @@
+<?php
+
+$breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
+         
+$breadcrumbs->addCrumb('home', array(
+  'label'=>Mage::helper('cms')->__('Home'), 'title'=>Mage::helper('cms')->__('Home Page'), 
+  'link'=>Mage::getBaseUrl()));
+
+$breadcrumbs->addCrumb('bargain', array(
+  'label'=>Mage::helper('core')->__('Special Deal'), 'title'=>Mage::helper('core')->__('Special Deal')));
+ 
+echo $this->getLayout()->getBlock('breadcrumbs')->toHtml(); 
+$products = new Aaryasolutions_Specialdeals_Block_Specialpriceproducts();
+
+?>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.css" media="all" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.js" type="text/javascript"></script>
+
+
+<div class="clearfix"></div>
+<div class="special_deals">
+<h2><?php echo Mage::helper('core')->__('Special Deals') ?></h2>
+
+
+<ul class="bxslider">
+  
+    <?php
+    
+    $products = new Aaryasolutions_Specialdeals_Block_Specialpriceproducts();
+
+    $binArray= Mage::getModel('specialdeals/specialdeals')->getCollection(); 
+    $urlparam=1;
+    
+   
+   
+    foreach ($binArray as $bin): ?>
+     <li class="<?php if($urlparam==$bin->getspecialdeals_number()) echo 'active'; ?>" style="background:<?php echo $bin->getspecialdeals_color(); ?>">
+                
+                <a data-toggle="tab" role="tab" href="#bin<?php echo $bin->getspecialdeals_number(); ?>">
+                <small><?php echo Mage::helper('core')->__('PRODUCTS FOR') ?></small>
+                <br>
+                <h1>$<?php echo $bin->getspecialdeals_price(); ?></h1>
+
+                <br>
+
+                <?php if(Mage::app()->getStore()->getCurrentCurrencyCode()!='USD'){
+                  ?>
+
+<span><?php echo Mage::helper('core')->currency(number_format($bin->getspecialdeals_price(),2), true, false); ?></span>
+                <br>
+                  <?php
+                } ?>
+
+                <h5 class="view-all">
+                 <?php echo Mage::helper('core')->__('View all') ?>
+                 </h5>
+                </a>
+                <div class="clearfix"></div>
+              </li>
+<?php endforeach; ?>
+</ul>
+</div>
+
+
+
+
+<div class="tab-content">
+
+<?php
+foreach($binArray as $bin){
+
+
+
+  ?>
+
+ <div class="tab-pane <?php if($urlparam==$bin->getspecialdeals_number()) echo 'active'; ?>" id="bin<?php echo $bin->getspecialdeals_number(); ?>">
+
+<?php echo $this->getPerTabhtml($bin->getspecialdeals_number()); ?>
+
+ </div>
+
+ 
+  <?php
+}
+
+?>
+
+</div>
+
+
+
+
+
+<style type="text/css">
+
+.bxslider li{
+  float: left;
+  padding:10px;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.bxslider li a{
+  text-decoration: none;
+}
+
+.slide small {
+  color: #cfc;
+}
+
+.slide h1 {
+  color: #cfc;
+}
+
+.view-all {
+  font-size:18px;
+  color: #999;
+}
+.bxslider li a{
+  display: block !important;
+}
+</style>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+<specialdeals_index_index>
+   <reference name="root">
+            <action method="setTemplate"><template>page/3columns.phtml</template></action>
+        </reference>
+        <reference name="content">
+          
+            <block type="specialdeals/specialpriceproducts" name="specialdeals.bin" as="sproducts" template="specialdeals/sproducts.phtml">
+            <block type="specialdeals/specialpriceproducts" name="specialproducts" template="specialdeals/products.phtml" />
+            </block>
+        </reference>
+</specialdeals_index_index>
+
+
+</layout>

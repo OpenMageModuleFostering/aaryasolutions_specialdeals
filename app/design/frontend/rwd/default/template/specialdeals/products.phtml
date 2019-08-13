@@ -1,0 +1,67 @@
+<?php
+
+
+$bin=$this->getBin(); 
+
+$price=Mage::getModel('specialdeals/specialdeals')->getPriceFromBinNumber($bin);
+$color=Mage::getModel('specialdeals/specialdeals')->getColorFromBinNumber($bin);
+
+?>
+<ul class="pagination">
+<?php
+
+
+
+
+foreach ($this->listSpecialProductsByPrice($price) as $_product): ?>
+
+
+    
+
+<li class="bargain_bin_product" style="margin-top:5px; width:100%; border:3px solid #ccc; float: left; background: <?php echo $color; ?>">
+<a href="<?php echo $_product->getProductUrl() ?>" style="width:100%; float: left; color:#fff; background: none">
+<div class="col-md-2">
+<img src="<?php echo $_product->getImageUrl(); ?>" style="width:100%;" />
+
+
+</div>
+<div class="col-md-8">
+
+<h4><?php echo $this->stripTags($_product->getName()); ?></h4>
+
+<?php
+
+	$finalPrice=$_product->getFinalPrice();
+	$wasPrice=$_product->getPrice();
+	$save=$wasPrice-$finalPrice;
+
+?>
+
+
+<p class="now"> Now <?php echo Mage::helper('core')->currency(number_format($_product->getFinalPrice(),2), true, false); ?></p>
+<p class="was"> Was <?php echo Mage::helper('core')->currency(number_format($_product->getPrice(),2), true, false); ?></p>
+</div>
+
+<div class="col-md-2 bargin_bin_save">
+
+<center>
+<span>
+Save <?php echo Mage::helper('core')->currency($save, true, false); ?>
+</span>
+</center>
+
+<h3>BUY NOW!</h3>
+
+</div>
+
+</a>
+</li>
+
+    <?php
+
+
+endforeach;
+
+?>
+</ul>
+

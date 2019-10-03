@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Aaryasolutions_Specialdeals",
+    "name": "OpenMageModuleFostering\/Aaryasolutions_Specialdeals",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Aaryasolutions_Specialdeals",
     "authors": [
-    {
-        "name": "AaryaSolutions",
-        "email": "info@aaryasolutions.com"
-    }
-],
+        {
+            "name": "AaryaSolutions",
+            "email": "info@aaryasolutions.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }

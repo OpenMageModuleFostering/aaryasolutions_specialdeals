@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Aaryasolutions_Specialdeals",
+    "name": "openmage-module-fostering\/aaryasolutions_specialdeals",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Aaryasolutions_Specialdeals",
     "authors": [
